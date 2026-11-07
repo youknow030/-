@@ -1,0 +1,7 @@
+{
+  "name": "零界突襲 ZERO FRONT",
+  "description": "近未來科幻第一人稱射擊遊戲（FPS）。扮演幽影部隊隊員凱恩，深入受未知科技影響的封鎖區，調查失控的零界核心並揭露隱瞞的陰謀。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

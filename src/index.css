@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cyber-blue: #00d2ff;
+    --color-cyber-cyan: #00f0ff;
+    --color-cyber-dark: #0a0e17;
+    --color-cyber-panel: rgba(10, 18, 30, 0.88);
+    --color-cyber-border: rgba(0, 210, 255, 0.35);
+  }
+
+  body {
+    background-color: #050811;
+    color: #e2e8f0;
+    font-family: 'Noto Sans TC', sans-serif;
+    user-select: none;
+    overflow: hidden;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', 'Chakra Petch', sans-serif;
+}
+
+.font-chakra {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Sci-Fi angled corners */
+.sci-box {
+  background: linear-gradient(135deg, rgba(8, 20, 36, 0.92) 0%, rgba(4, 11, 22, 0.96) 100%);
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.12), inset 0 0 15px rgba(0, 200, 255, 0.05);
+  clip-path: polygon(
+    0 10px,
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+}
+
+.sci-box-cut-br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%
+  );
+}
+
+.sci-btn {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%,
+    0 10px
+  );
+}
+
+.sci-btn:hover {
+  filter: brightness(1.25);
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
+}
+
+/* Scanline and holographic grid */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 210, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 210, 255, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Custom Scrollbar for Sci-Fi UI */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 20, 30, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 210, 255, 0.4);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.8);
+}
+
